@@ -1,0 +1,6 @@
+Model:,Random Forest Classifier
+Max_depth,9
+n_estimators,750
+roc_auc,0.81
+threshold,0.46
+sensitivity(with threshold above),0.9
