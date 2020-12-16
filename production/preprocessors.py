@@ -13,8 +13,10 @@ def prepare_weather(df):
 	w = w[config.FROM_WEATHER]
 
 	#initial replacing and filling missing or trace calues
-	w = w.replace(['M','-'],np.nan)
+	w = w.replace('M',np.nan)
 	w = w.replace(['T','  T'], 0.01)
+	w.loc[:,'Sunrise'] = w.loc[:,'Sunrise'].replace('-',method='bfill')
+	w.loc[:,'Sunrise'] = w.loc[:,'Sunrise'].replace('-',method='ffill')
 
 	#filling missing values with 0 where relevant
 	w['PrecipTotal'] = w['PrecipTotal'].fillna(0)
@@ -153,7 +155,7 @@ class FeatureLagger(BaseEstimator, TransformerMixin):
 				name = feature + ' ' + str(n) + ' ' + kind
 				X[name] = exp_lag(X[feature],n)
 				X = X.drop(feature,axis=1)
-
+				
 		return X
 
 

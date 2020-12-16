@@ -30,16 +30,16 @@ if __name__ == '__main__':
 	y = X[config.TARGET]
 	X = X.drop(config.TARGET,axis=1)
 
+	lagger = pp.FeatureLagger(variables=config.FEAT_TO_LAG)
+	X = lagger.transform(X)
+
 	# test pipeline
 	import numpy as np
 	from sklearn.model_selection import train_test_split
 	from sklearn.metrics import roc_auc_score
 
 
-	X_train, X_test, y_train, y_test = train_test_split(
-		X,y, 
-		test_size=0.2,
-		random_state=42)
+	X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2,random_state=123)
 
 	y_pred_test = make_prediction(X_test)
 	roc_test = roc_auc_score(y_test,y_pred_test)

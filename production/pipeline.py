@@ -8,10 +8,10 @@ import config
 
 pipe = Pipeline(
 	[
-		('feature_lagger', pp.FeatureLagger(variables=config.FEAT_TO_LAG)),
+		#('feature_lagger', pp.FeatureLagger(variables=config.FEAT_TO_LAG)),
 		
 		('standard_scaler', StandardScaler()),
 		
-		('randomforrestclassifier', RandomForestClassifier(random_state=42))
+		('randomforestclassifier', RandomForestClassifier(random_state=42))
 	]
 )
