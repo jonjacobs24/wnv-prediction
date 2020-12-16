@@ -16,12 +16,22 @@ Feature analysis with the SHAP library largely confirms existing knowledge about
 ├── plots                                <- A selection of plots refereced in the report
 │
 ├── data
-│   ├── train.csv.zip                    <- Data from the City of Chicago Department of Public Health
-│   ├── spray.csv.zip                    <- Insecticide spray data
-│   ├── weather.csv.zip                  <- NOAA weather data at two weather stations in Chicago
-│   ├── X2.pkl, y.pkl                    <- Cleaned and explored data ready for analysis
+│   ├── raw                              <- raw, unprocessed data
+│       ├── train.csv.zip                <- Data from the City of Chicago Department of Public Health
+│       ├── spray.csv.zip                <- Insecticide spray data
+│       ├── weather.csv.zip              <- NOAA weather data at two weather stations in Chicago
+│   ├── processed                        <- Cleaned and explored data ready for analysis
+│       ├── X2.pkl                       <- Independent data
+│       ├── y2.pkl                       <- Target variable
 │   └── noaa_..._documentation.pdf.      <- Document explaining the form and types of data observed
 │
 ├── Old Notebooks                        <- notebooks of a priliminary analysis
+│
+├── production                           <- working directory of pyhton scripts for model delpoyment
+
+
+
+
+
 
 ```
