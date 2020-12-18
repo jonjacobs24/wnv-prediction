@@ -5,7 +5,11 @@ from sklearn.pipeline import Pipeline
 from WNVPrediction.processing import preprocessors as pp
 from WNVPrediction.processing import data_management as dm
 
+from WNVPrediction import __version__ as _version
 
+import logging
+
+_logger = logging.getLogger(__name__)
 
 
 def save_pipeline(*,pipeline_to_persist) -> None:

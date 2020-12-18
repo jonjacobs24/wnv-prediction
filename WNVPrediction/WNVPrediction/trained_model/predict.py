@@ -9,7 +9,8 @@ from WNVPrediction.processing import preprocessors as pp
 from WNVPrediction.processing import data_management as dm
 
 
-
+import logging
+_logger = logging.getLogger(__name__)
 
 
 def make_prediction(*,X:pd.DataFrame) -> pd.Series:

@@ -1,7 +1,5 @@
-#data source locations
-RAW_WEATHER = '../data/raw/weather.csv.zip'
-RAW_SPRAY = '../data/raw/spray.csv.zip'
-RAW_MOSQUITO = '../data/raw/train.csv.zip'
+import pathlib
+import WNVPrediction
 
 #target variable for analysis
 TARGET = 'WnvPresent'
@@ -30,8 +28,14 @@ FEAT_TO_LAG = [('spray_day', 4, 'lag'), ('Depart', 14, 'exp'), ('PrecipTotal', 2
 
 
 #random forest classifier parameters
+PACKAGE_ROOT = pathlib.Path(WNVPrediction.__file__).resolve().parent
+PIPELINE_NAME = PACKAGE_ROOT / 'trained_model/RandomForest.pkl'
 
-PIPELINE_NAME = 'RandomForest.pkl'
-TRAINED_MODEL_DIR = './'
 N_ESTIMATORS = 1050
 MAX_DEPTH = 9
+
+#data source locations
+DATASET_DIR = PACKAGE_ROOT / 'data'
+RAW_WEATHER = DATASET_DIR / 'raw/weather.csv.zip'
+RAW_SPRAY = DATASET_DIR / 'raw/spray.csv.zip'
+RAW_MOSQUITO = DATASET_DIR / 'raw/train.csv.zip'

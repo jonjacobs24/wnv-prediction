@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
    name='WNVPrediction',
-   version='1.0',
+   version='0.1.0',
    description='A precitive tool for the City of Chicagos management of the West Nile Virus',
    author='Jonathan Jacobs',
    author_email='jonjacobs24@gmail.com',

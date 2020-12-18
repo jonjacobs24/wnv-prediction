@@ -13,7 +13,8 @@ from WNVPrediction.processing import data_management as dm
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import roc_auc_score
 
-
+import logging
+_logger = logging.getLogger(__name__)
 
 def run_training():
 	"""Train the model."""

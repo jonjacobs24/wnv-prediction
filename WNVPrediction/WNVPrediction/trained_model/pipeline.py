@@ -5,7 +5,8 @@ from sklearn.preprocessing import StandardScaler
 from WNVPrediction.processing import preprocessors as pp
 from WNVPrediction.config import config
 
-
+import logging
+_logger = logging.getLogger(__name__)
 
 pipe = Pipeline(
 	[

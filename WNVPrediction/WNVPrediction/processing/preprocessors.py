@@ -3,7 +3,8 @@ import numpy as np
 from sklearn.base import BaseEstimator, TransformerMixin
 from WNVPrediction.config import config
 
-
+import logging
+_logger = logging.getLogger(__name__)
 
 def prepare_raw_data(*, weather_data:pd.DataFrame,mosquito_data:pd.DataFrame, spray_data:pd.DataFrame) -> pd.DataFrame:
 	"""takes three seperate data sources and combines into one ready for further processing"""
