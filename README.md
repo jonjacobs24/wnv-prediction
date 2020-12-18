@@ -13,7 +13,9 @@ Feature analysis with the SHAP library largely confirms existing knowledge about
 │
 ├── WNVFinalReport [JonathanJacobs].pdf  <- Detailed report on the entire process and findings
 │
-├── plots                                <- A selection of plots refereced in the report
+├── West Nile Virus Presentation.pdf     <- Presentation outlining the process and findings
+│
+├── plots                                <- A selection of plots refereced in the report 
 │
 ├── data
 │   ├── raw                              <- raw, unprocessed data
