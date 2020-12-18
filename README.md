@@ -27,7 +27,7 @@ Feature analysis with the SHAP library largely confirms existing knowledge about
 │
 ├── Old Notebooks                        <- notebooks of a priliminary analysis
 │
-├── production                           <- working directory of pyhton scripts for model delpoyment
+├── WNVPrediction                        <- working directory of pyhton scripts for model delpoyment
 
 
 
