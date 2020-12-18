@@ -1,0 +1,4 @@
+Collecting numpy
+  Using cached numpy-1.19.4-cp39-cp39-macosx_10_9_x86_64.whl (15.4 MB)
+Installing collected packages: numpy
+Successfully installed numpy-1.19.4
