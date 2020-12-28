@@ -1,0 +1,17 @@
+include *.txt
+include *.md
+include *.cfg
+include *.pkl
+recursive-include ./WNVPrediction/*
+
+include WNVPrediction/data/*
+include WNVPrediction/data/raw/*
+include WNVPrediction/data/processed/*
+include WNVPrediction/trained_model/*.pkl
+include WNVPrediction/VERSION
+
+include ./requirements.txt
+exclude *.log
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]

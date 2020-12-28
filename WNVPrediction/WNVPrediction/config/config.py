@@ -29,7 +29,8 @@ FEAT_TO_LAG = [('spray_day', 4, 'lag'), ('Depart', 14, 'exp'), ('PrecipTotal', 2
 
 #random forest classifier parameters
 PACKAGE_ROOT = pathlib.Path(WNVPrediction.__file__).resolve().parent
-PIPELINE_NAME = PACKAGE_ROOT / 'trained_model/RandomForest.pkl'
+PIPELINE_NAME = 'RandomForest'
+TRAINED_MODEL_DIR = PACKAGE_ROOT / 'trained_model'
 
 N_ESTIMATORS = 1050
 MAX_DEPTH = 9

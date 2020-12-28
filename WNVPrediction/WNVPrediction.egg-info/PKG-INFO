@@ -1,10 +1,20 @@
-Metadata-Version: 1.0
+Metadata-Version: 2.1
 Name: WNVPrediction
-Version: 1.0
+Version: 0.1.0
 Summary: A precitive tool for the City of Chicagos management of the West Nile Virus
-Home-page: UNKNOWN
+Home-page: https://github.com/jonjacobs24/WestNileVirusPrediction
 Author: Jonathan Jacobs
 Author-email: jonjacobs24@gmail.com
-License: UNKNOWN
-Description: UNKNOWN
+License: BSD 3
+Description: A precitive tool for the City of Chicagos management of the West Nile Virus
 Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown

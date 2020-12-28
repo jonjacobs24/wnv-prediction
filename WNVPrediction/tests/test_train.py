@@ -1,7 +1,8 @@
 import pytest
-from WNVPrediction.trained_model import predict
+from WNVPrediction import predict
 from WNVPrediction.processing import data_management as dm
 from WNVPrediction.config import config
+from WNVPrediction import __version__ as _version
 
 
 def test_training_roc_score(roc_thresh):
