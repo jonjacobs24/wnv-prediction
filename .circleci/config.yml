@@ -223,7 +223,7 @@ workflows:
             - test_WNVPrediction_py37
             - test_WNVPrediction_py38
             - test_wnv_api_py36
-           - test_wnv_api_py37
+            - test_wnv_api_py37
           # - section_9_differential_tests
           filters:
             branches:
