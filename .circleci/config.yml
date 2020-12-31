@@ -119,23 +119,24 @@ jobs:
             . venv/bin/activate
             chmod +x ./scripts/publish_model.sh
             ./scripts/publish_model.sh ./packages/WNVPrediction/
-  # section_9_differential_tests:
-  #   <<: *defaults
-  #   steps:
-  #     - checkout
-  #     - *prepare_venv
-  #     - run:
-  #         name: Capturing previous model predictions
-  #         command: |
-  #           . venv/bin/activate
-  #           pip install -r packages/wnv_api/diff_test_requirements.txt
-  #           PYTHONPATH=./packages/wnv_api python3 packages/wnv_api/tests/capture_model_predictions.py
-  #     - run:
-  #         name: Runnning differential tests
-  #         command: |
-  #           . venv/bin/activate
-  #           pip install -r packages/wnv_api/requirements.txt
-  #           py.test -vv packages/wnv_api/tests -m differential
+            
+  section_9_differential_tests:
+    <<: *defaults
+    steps:
+      - checkout
+      - *prepare_venv
+      - run:
+          name: Capturing previous model predictions
+          command: |
+            . venv/bin/activate
+            pip install -r packages/wnv_api/diff_test_requirements.txt
+            PYTHONPATH=./packages/wnv_api python3 packages/wnv_api/tests/capture_model_predictions.py
+      - run:
+          name: Runnning differential tests
+          command: |
+            . venv/bin/activate
+            pip install -r packages/wnv_api/requirements.txt
+            py.test -vv packages/wnv_api/tests -m differential
   # section_10_deploy_to_heroku:
   #   <<: *defaults
   #   steps:

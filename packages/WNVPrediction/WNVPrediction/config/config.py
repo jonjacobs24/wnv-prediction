@@ -40,3 +40,6 @@ DATASET_DIR = PACKAGE_ROOT / 'data'
 RAW_WEATHER = DATASET_DIR / 'raw/weather.csv.zip'
 RAW_SPRAY = DATASET_DIR / 'raw/spray.csv.zip'
 RAW_MOSQUITO = DATASET_DIR / 'raw/train.csv.zip'
+
+
+ACCEPTABLE_MODEL_DIFFERENCE = 0.05
