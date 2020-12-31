@@ -25,12 +25,12 @@ def test_model_prediction_differential(
     previous_model_predictions = previous_model_df.predictions.values
 
     test_data = lr(weather_path=model_config.RAW_WEATHER,mosquito_path=model_config.RAW_MOSQUITO, 
-        spray_path=model_config.RAW_SPRAY,target_present=False)
+        spray_path=model_config.RAW_SPRAY,target_present=False).iloc[:,1:]
 
     multiple_test_json = test_data.iloc[99:600,:]
 
     # When
-    current_result = make_prediction(input_data=multiple_test_input)
+    current_result = make_prediction(X=multiple_test_input)
     current_model_predictions = current_result.get('predictions')
 
     # Then
