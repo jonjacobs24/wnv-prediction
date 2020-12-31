@@ -209,7 +209,7 @@ workflows:
   version: 2
   test-all:
     jobs:
-      - train_and_upload_WNVPrediction:
+      - train_and_upload_WNVPrediction
       # - test_WNVPrediction_py36
       # - test_WNVPrediction_py37
       # - test_WNVPrediction_py38
