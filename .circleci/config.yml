@@ -119,7 +119,7 @@ jobs:
             . venv/bin/activate
             chmod +x ./scripts/publish_model.sh
             ./scripts/publish_model.sh ./packages/WNVPrediction/
-            
+
   section_9_differential_tests:
     <<: *defaults
     steps:
@@ -216,7 +216,7 @@ workflows:
       - test_wnv_api_py36
       - test_wnv_api_py37
       # - test_wnv_api_py38 pending NN model update
-      # - section_9_differential_tests
+       - section_9_differential_tests
       - train_and_upload_WNVPrediction:
           requires:
             - test_WNVPrediction_py36
@@ -224,7 +224,7 @@ workflows:
             - test_WNVPrediction_py38
             - test_wnv_api_py36
             - test_wnv_api_py37
-            # - section_9_differential_tests
+          # - section_9_differential_tests
           filters:
             branches:
               only:
