@@ -4,6 +4,6 @@
 flask>=1.0.2, <=1.2.0
 
 # Install from gemfury
-WNVPrediction==0.1.0
+WNVPrediction==0.1.1
 
 
