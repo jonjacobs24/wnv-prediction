@@ -1,4 +1,0 @@
-Model:,Random Forest Classifier
-Max_depth,9
-n_estimators, 1200
-roc_auc,0.816
