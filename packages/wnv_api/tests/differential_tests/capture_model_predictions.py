@@ -31,9 +31,7 @@ def capture_predictions(
 
     # hack here to save the file to the regression model
     # package of the repo, not the installed package
-    predictions_df.to_csv(
-        f'{PACKAGE_ROOT.parent.parent}/'
-        f'WNVPrediction/WNVPrediction/data/{save_file}')
+    predictions_df.to_csv(f'{PACKAGE_ROOT}/{save_file}')
 
 
 if __name__ == '__main__':
