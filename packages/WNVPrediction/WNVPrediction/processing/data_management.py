@@ -55,7 +55,8 @@ def load_and_ready_data(target_present=False,*,weather_path:str,mosquito_path:st
 		return X,y
 
 	if ~target_present:
-
+		if config.TARGET in X.columns:
+			X = X.drop(config.TARGET,axis=1)
 		#lagging features
 		lagger = pp.FeatureLagger(variables=config.FEAT_TO_LAG)
 		X = lagger.transform(X)
