@@ -14,8 +14,7 @@ def test_prediction_endpoint_validation_200(flask_test_client):
     # data versions to get confused by not spreading it
     # across packages.
     test_data = lr(weather_path=model_config.RAW_WEATHER,mosquito_path=model_config.RAW_MOSQUITO, 
-        spray_path=model_config.RAW_SPRAY,target_present=False)
-
+        spray_path=model_config.RAW_SPRAY,target_present=False).iloc[:,1:]
 
     post_json = test_data.to_json(orient='records')
 
