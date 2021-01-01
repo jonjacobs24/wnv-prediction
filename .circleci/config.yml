@@ -236,7 +236,7 @@ workflows:
       #       branches:
       #         only:
       #           - master
-     - section_11_build_and_push_to_heroku_docker:
+      - section_11_build_and_push_to_heroku_docker:
          requires:
            - train_and_upload_WNVPrediction
          filters:
