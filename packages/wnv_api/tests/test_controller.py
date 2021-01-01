@@ -39,7 +39,7 @@ def test_prediction_endpoint_returns_prediction(flask_test_client):
 	# across packages.
 
 	test_data = lr(weather_path=model_config.RAW_WEATHER,mosquito_path=model_config.RAW_MOSQUITO, 
-		spray_path=model_config.RAW_SPRAY,target_present=False)
+		spray_path=model_config.RAW_SPRAY,target_present=False).iloc[:,1:]
 	
 	post_json = test_data.to_json(orient='records')
 

@@ -37,7 +37,7 @@ def predict():
 
 		# Step 2: change to datapframe
 
-		X = pd.DataFrame.from_dict(input_data).iloc[:,1:]
+		X = pd.DataFrame.from_dict(input_data)
 
 		# Step 3: Model prediction
 		result = make_prediction(X=X)
