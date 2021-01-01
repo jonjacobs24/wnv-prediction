@@ -1,7 +1,7 @@
 jupyter_notebooks*
 */env*
 */venv*
-.circleci*
+
 packages/WNVPrediction
 *.env
 *.log
