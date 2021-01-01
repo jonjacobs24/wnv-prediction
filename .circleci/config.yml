@@ -210,32 +210,32 @@ workflows:
   version: 2
   test-all:
     jobs:
-      - test_WNVPrediction_py36
-      - test_WNVPrediction_py37
-      - test_WNVPrediction_py38
+      # - test_WNVPrediction_py36
+      # - test_WNVPrediction_py37
+      # - test_WNVPrediction_py38
       - test_wnv_api_py36
       - test_wnv_api_py37
       # - test_wnv_api_py38 pending NN model update
-      - section_9_differential_tests
-      - train_and_upload_WNVPrediction:
-          requires:
-            - test_WNVPrediction_py36
-            - test_WNVPrediction_py37
-            - test_WNVPrediction_py38
-            - test_wnv_api_py36
-            - test_wnv_api_py37
-          # - section_9_differential_tests
-          filters:
-            branches:
-              only:
-                - master
-      - section_10_deploy_to_heroku:
-          requires:
-            - train_and_upload_WNVPrediction
-          filters:
-            branches:
-              only:
-                - master
+      # - section_9_differential_tests
+      # - train_and_upload_WNVPrediction:
+      #     requires:
+      #       - test_WNVPrediction_py36
+      #       - test_WNVPrediction_py37
+      #       - test_WNVPrediction_py38
+      #       - test_wnv_api_py36
+      #       - test_wnv_api_py37
+      #     # - section_9_differential_tests
+      #     filters:
+      #       branches:
+      #         only:
+      #           - master
+      # - section_10_deploy_to_heroku:
+      #     requires:
+      #       - train_and_upload_WNVPrediction
+      #     filters:
+      #       branches:
+      #         only:
+      #           - master
      # - section_11_build_and_push_to_heroku_docker:
 #          requires:
 #            - train_and_upload_WNVPrediction
