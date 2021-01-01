@@ -20,7 +20,9 @@ pipe = dm.load_pipeline(path=pipeline_file_name)
 
 def make_prediction(*,X:pd.DataFrame) -> pd.Series:
 	"""makes  a prediction based on data and a loaded pipeline """
-	
+	df = pd.DataFrame(X)
+	df.head()
+
 	y_pred = pipe.predict_proba(X)[:,1]
 	
 	_logger.info(
