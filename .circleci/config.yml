@@ -138,7 +138,7 @@ jobs:
             pip install -r packages/wnv_api/requirements.txt
             py.test -vv packages/wnv_api/tests -m differential
   section_10_deploy_to_heroku:
-    <<: *defaultsA
+    <<: *defaults
     steps:
       - checkout
       - run:
