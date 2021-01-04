@@ -5,35 +5,6 @@ Relying on publicly available climatological data, as well as mosquito and publi
 Feature analysis with the SHAP library largely confirms existing knowledge about the interactions between mosquito populations and climatological factors. Yet, there are interesting relationships between human factors and mosquito populations that are previously unreported and advance the model's ability to predict the presence of the WNV. Associations between WNV and dry airborne particulate, seasonality, and mist are prevalent factors in predicting the WNV according to this analysis and modeling. 
 
 ```
-├── README.md 
-│
-├── 01 Cleaning and EDA.ipynb            <- Notebook that imports, cleans, and analyzes raw data
-│
-├── 02 Modeling and Prediction.ipynb     <- ML and feature analysis on the data cleaned in the previous notebook
-│
-├── WNVFinalReport [JonathanJacobs].pdf  <- Detailed report on the entire process and findings
-│
-├── West Nile Virus Presentation.pdf     <- Presentation outlining the process and findings
-│
-├── plots                                <- A selection of plots refereced in the report 
-│
-├── data
-│   ├── raw                              <- raw, unprocessed data
-│       ├── train.csv.zip                <- Data from the City of Chicago Department of Public Health
-│       ├── spray.csv.zip                <- Insecticide spray data
-│       ├── weather.csv.zip              <- NOAA weather data at two weather stations in Chicago
-│   ├── processed                        <- Cleaned and explored data ready for analysis
-│       ├── X2.pkl                       <- Independent data
-│       ├── y2.pkl                       <- Target variable
-│   └── noaa_..._documentation.pdf.      <- Document explaining the form and types of data observed
-│
-├── Old Notebooks                        <- notebooks of a priliminary analysis
-│
-├── WNVPrediction                        <- working directory of pyhton scripts for model delpoyment
-
-
-
-
-
+pip install WNVPrediction                   <- Install this package
 
 ```
